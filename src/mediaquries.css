@@ -1,0 +1,118 @@
+:root{
+    --bg-color:#f4f9fd;
+    --button-color:#010101;
+    --font-color-bl:#2baffc;
+    --font-color-blk:#010101;
+    --search-border-grn:#55c360;
+    --button-login:#55c360;
+    --font-color-blue-fd:#4f56c8;
+    --font-color-blue-hover:#6892bd;
+}
+@media only screen and (max-width: 768px) {
+    .nav-menu{
+        margin-left: 1.2em;
+        position: fixed;
+        left: -100%;
+        top: 3rem;
+        flex-direction: column;
+        width: 90%;
+        border-radius: 10px;
+        transition: 1.0s;
+        box-shadow: 0 7px 8px rgb(0 0 0 / 20%);
+        background-color: rgb(251 251 251 / 91%);
+    }
+    .divider{
+        display: block;
+    }
+    header nav ul {
+        gap: 0rem;
+    }
+    .nav-link {
+        color:var(--font-color-blue-fd);
+    }
+    .nav-link:focus{
+        color:var(--font-color-blue-hover);
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        
+        margin: 0.7rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .search-bar-container {
+        width: 80%;
+        
+    }
+    .footer-holder{
+        flex-direction: column;
+        text-align:center ;
+    }
+   .program-holder{
+    grid-template-columns: 1fr;
+   }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .semester-grid {
+        grid-template-columns: 1fr;
+    }
+    .access-btn{
+     display: block;
+    }
+    .semester-img img{
+        margin: 0 auto;
+    }
+    .semester .subject-list {
+        display: none;
+    }
+    .semester {
+        flex-direction: column;
+    }
+}
+@media (max-width: 1038px) {
+    
+    .semester-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .semester {
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .contact-holder .nav-holder{
+        align-items: flex-start;
+    }
+}
+@media (min-width: 771px) {
+    /* footer responsiveness */
+    .social-media{
+        flex-direction: column;
+    }
+}
+@media (min-width: 996px) {
+
+    .container{
+        flex-direction:row;
+    }
+    
+}
