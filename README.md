@@ -17,7 +17,7 @@
         <li>semester 6</li>
       <ol>
     </li>
-   <ul>
+  </ul>
   <li>Programs</li>
      <ul>
        <li>c programming</li>
@@ -36,7 +36,7 @@
      </ul>
   <li>Contact</li>
      <p>for feedback and maintenance purpose</p>
-
+</ol>
 # Task to achieve
 - Fully functional Search bar.
 - Adding actual links to the subject topics.
@@ -46,4 +46,4 @@
 - creating a contact modal so that user can send there testimonial,tesetimonial section is for showing messeges of student users.
 
 THIS PROJECT IS UNDER DEVELOPMENT.FEEL FREE TO FORK TO CONTRIBUTE!     
-</ol>
+
