@@ -37,6 +37,7 @@
   <li>Contact</li>
      <p>for feedback and maintenance purpose</p>
 </ol>
+
 # Task to achieve
 - Fully functional Search bar.
 - Adding actual links to the subject topics.
