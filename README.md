@@ -1,5 +1,6 @@
 # Bca-siksha
 - project Type : Web development
+- LANG used : HTML | CSS | JS
 # Table of content
 - this website contains Five main section 
 <ol>
@@ -46,5 +47,5 @@
 - Adding a sub page that contains the list of all referred Resources.
 - creating a contact modal so that user can send there testimonial,tesetimonial section is for showing messeges of student users.
 
-THIS PROJECT IS UNDER DEVELOPMENT.FEEL FREE TO FORK TO CONTRIBUTE!     
+THIS PROJECT IS UNDER DEVELOPMENT.FEEL FREE TO FORK & CONTRIBUTE!     
 
