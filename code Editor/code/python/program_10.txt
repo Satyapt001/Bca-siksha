@@ -1,0 +1,2 @@
+// Code for Python program 10
+print('Program 10 in Python')
