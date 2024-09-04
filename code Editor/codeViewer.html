@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/mediaquries.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap">
+
+</head>
+
+<body class="light-mode"> <!-- Start in light mode -->
+    <div class="container">
+        <header class="header">
+            <h1>University Programs</h1>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search for a program...">
+                <button id="clear-btn" class="clear-btn" aria-label="Clear">✖</button>
+            </div>
+            
+            <button id="mode-switch">🌙</button>
+        </header>
+
+        <div class="search-results-container">
+            <div id="search-results" class="search-results">
+                <!-- Search results will be dynamically inserted here -->
+            </div>
+        </div>
+        <div class="question">
+            <p id="question-text">//rendered by JavaScript</p>
+        </div>
+
+        <div class="editor-container">
+            <div class="language-logo">
+                <span id="language">//rendered by JavaScript</span>
+            </div>
+            <pre class="code-block" id="code-block">
+// code will be rendered here
+            </pre>
+            <div class="editor-buttons">
+                <button id="edit-btn">Edit</button>
+                <button id="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
