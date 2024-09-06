@@ -48,5 +48,5 @@
 - creating a message modal so that user can send there testimonial,testimonial section is for showing messeges of student users.
 
 THIS PROJECT IS UNDER DEVELOPMENT❗
-FEEL FREE TO FORK & CONTRIBUTE...  
+FEEL FREE TO FORK & CONTRIBUTE ✅
 
