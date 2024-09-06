@@ -10,12 +10,12 @@
   <ul>
     <li>
       <ol>
-        <li>semester 1</li>
-        <li>semester 2</li>
-        <li>semester 3</li>
-        <li>semester 4</li>
-        <li>semester 5</li>
-        <li>semester 6</li>
+        <li>semester i</li>
+        <li>semester ii</li>
+        <li>semester iii</li>
+        <li>semester iv</li>
+        <li>semester v</li>
+        <li>semester vi</li>
       <ol>
     </li>
   </ul>
