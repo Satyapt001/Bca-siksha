@@ -1,0 +1,27 @@
+def factorial_iterative(n):
+    # Initialize result to 1
+    result = 1
+    
+    # Multiply result by every number from 1 to n
+    for i in range(1, n + 1):
+        result *= i
+        
+    return result
+
+def main():
+    try:
+        # Take user input
+        n = int(input("Enter a non-negative integer to find its factorial: "))
+        
+        if n < 0:
+            print("Factorial is not defined for negative numbers.")
+        else:
+            # Calculate factorial using iterative method
+            result = factorial_iterative(n)
+            print(f"The factorial of {n} is {result}.")
+    
+    except ValueError:
+        print("Invalid input. Please enter a non-negative integer.")
+
+if __name__ == "__main__":
+    main()
