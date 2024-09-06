@@ -26,7 +26,7 @@
        <li>java programming</li>
        <li>python programming</li>
        <li>Html</li>
-       <li>unix</li>**upcomming
+       <p><li>unix</li>**upcomming</p>
        <li>SQL</li>**upcomming
        <li>Data mining</li>**upcomming
      </ul>
