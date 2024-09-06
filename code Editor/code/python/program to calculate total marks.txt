@@ -1,0 +1,41 @@
+# Function to calculate total marks, percentage and grade
+def calculate_results(marks1, marks2, marks3):
+    # Calculate total marks
+    total_marks = marks1 + marks2 + marks3
+    
+    # Calculate percentage (assuming each subject is out of 100)
+    percentage = (total_marks / 300) * 100
+    
+    # Determine grade based on percentage
+    if percentage >= 80:
+        grade = 'A'
+    elif percentage >= 70:
+        grade = 'B'
+    elif percentage >= 60:
+        grade = 'C'
+    elif percentage >= 40:
+        grade = 'D'
+    else:
+        grade = 'E'
+    
+    return total_marks, percentage, grade
+
+# Input marks from user
+try:
+    marks1 = float(input("Enter marks obtained in subject 1: "))
+    marks2 = float(input("Enter marks obtained in subject 2: "))
+    marks3 = float(input("Enter marks obtained in subject 3: "))
+
+    # Ensure marks are within valid range
+    if (0 <= marks1 <= 100) and (0 <= marks2 <= 100) and (0 <= marks3 <= 100):
+        # Calculate results
+        total_marks, percentage, grade = calculate_results(marks1, marks2, marks3)
+        
+        # Display the results
+        print(f"Total Marks: {total_marks}")
+        print(f"Percentage: {percentage:.2f}%")
+        print(f"Grade: {grade}")
+    else:
+        print("Marks must be between 0 and 100.")
+except ValueError:
+    print("Invalid input. Please enter numeric values.")

@@ -1,2 +1,0 @@
-// Code for Python program 3
-print('Program 3 in Python')
