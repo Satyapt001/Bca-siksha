@@ -1,0 +1,28 @@
+import math
+
+def series_sum(n):
+    total_sum = 0
+    for i in range(1, n + 1):
+        term = i / math.factorial(i)
+        if i % 2 == 0:
+            term = -term
+        total_sum += term
+    return total_sum
+
+def main():
+    try:
+        # Take user input for the number of terms
+        n = int(input("Enter the number of terms in the series: "))
+
+        if n <= 0:
+            print("Please enter a positive integer.")
+        else:
+            # Calculate the sum of the series
+            result = series_sum(n)
+            print(f"The sum of the series for {n} terms is {result:.6f}.")
+    
+    except ValueError:
+        print("Invalid input. Please enter an integer value.")
+
+if __name__ == "__main__":
+    main()
