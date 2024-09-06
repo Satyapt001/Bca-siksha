@@ -1,0 +1,30 @@
+def fibonacci(n):
+    # Initialize the first two terms of the Fibonacci series
+    a, b = 0, 1
+    result = []
+
+    # Generate Fibonacci series up to the nth term
+    for _ in range(n):
+        result.append(a)
+        a, b = b, a + b
+
+    return result
+
+def main():
+    try:
+        # Take user input for the number of terms
+        n = int(input("Enter the number of terms in the Fibonacci series: "))
+
+        if n <= 0:
+            print("Please enter a positive integer.")
+        else:
+            # Generate and display the Fibonacci series
+            series = fibonacci(n)
+            print(f"The first {n} terms of the Fibonacci series are:")
+            print(series)
+    
+    except ValueError:
+        print("Invalid input. Please enter an integer value.")
+
+if __name__ == "__main__":
+    main()
