@@ -1,0 +1,68 @@
+import math
+
+# Define functions to calculate areas
+def area_of_rectangle(length, width):
+    return length * width
+
+def area_of_square(side):
+    return side * side
+
+def area_of_circle(radius):
+    return math.pi * radius * radius
+
+def area_of_triangle(base, height):
+    return 0.5 * base * height
+
+# Dictionary to map choices to functions
+menu_options = {
+    1: ("Area of Rectangle", area_of_rectangle),
+    2: ("Area of Square", area_of_square),
+    3: ("Area of Circle", area_of_circle),
+    4: ("Area of Triangle", area_of_triangle)
+}
+
+# Function to display the menu
+def display_menu():
+    print("\nArea Calculation Menu")
+    for key, (desc, _) in menu_options.items():
+        print(f"{key}. {desc}")
+    print("5. Exit")
+
+# Main program
+def main():
+    while True:
+        display_menu()
+        try:
+            choice = int(input("Enter your choice (1-5): "))
+
+            if choice == 5:
+                print("Exiting the program.")
+                break
+
+            if choice in menu_options:
+                desc, func = menu_options[choice]
+
+                if choice == 1:
+                    length = float(input("Enter the length of the rectangle: "))
+                    width = float(input("Enter the width of the rectangle: "))
+                    result = func(length, width)
+                elif choice == 2:
+                    side = float(input("Enter the side length of the square: "))
+                    result = func(side)
+                elif choice == 3:
+                    radius = float(input("Enter the radius of the circle: "))
+                    result = func(radius)
+                elif choice == 4:
+                    base = float(input("Enter the base of the triangle: "))
+                    height = float(input("Enter the height of the triangle: "))
+                    result = func(base, height)
+
+                print(f"{desc}: {result:.2f}")
+            else:
+                print("Invalid choice. Please select a number between 1 and 5.")
+
+        except ValueError:
+            print("Invalid input. Please enter numeric values.")
+
+if __name__ == "__main__":
+    main()
