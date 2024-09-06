@@ -1,0 +1,80 @@
+def matrix_addition(A, B):
+    # Ensure the matrices are compatible for addition
+    if len(A) != len(B) or len(A[0]) != len(B[0]):
+        raise ValueError("Matrices must have the same dimensions for addition.")
+    
+    # Initialize the result matrix with zeros
+    result = [[0 for _ in range(len(A[0]))] for _ in range(len(A))]
+    
+    # Perform element-wise addition
+    for i in range(len(A)):
+        for j in range(len(A[0])):
+            result[i][j] = A[i][j] + B[i][j]
+    
+    return result
+
+def matrix_multiplication(A, B):
+    # Ensure the matrices are compatible for multiplication
+    if len(A[0]) != len(B):
+        raise ValueError("Number of columns in the first matrix must equal the number of rows in the second matrix.")
+    
+    # Initialize the result matrix with zeros
+    result = [[0 for _ in range(len(B[0]))] for _ in range(len(A))]
+    
+    # Perform matrix multiplication
+    for i in range(len(A)):
+        for j in range(len(B[0])):
+            for k in range(len(B)):
+                result[i][j] += A[i][k] * B[k][j]
+    
+    return result
+
+def print_matrix(matrix):
+    for row in matrix:
+        print(" ".join(map(str, row)))
+
+def main():
+    try:
+        # Input dimensions for matrix A
+        rows_A = int(input("Enter the number of rows for matrix A: "))
+        cols_A = int(input("Enter the number of columns for matrix A: "))
+        
+        # Input dimensions for matrix B
+        rows_B = int(input("Enter the number of rows for matrix B: "))
+        cols_B = int(input("Enter the number of columns for matrix B: "))
+
+        # Input matrix A
+        print("Enter the elements of matrix A:")
+        matrix_A = []
+        for i in range(rows_A):
+            row = list(map(int, input(f"Enter row {i+1} of matrix A (space-separated): ").split()))
+            matrix_A.append(row)
+        
+        # Input matrix B
+        print("Enter the elements of matrix B:")
+        matrix_B = []
+        for i in range(rows_B):
+            row = list(map(int, input(f"Enter row {i+1} of matrix B (space-separated): ").split()))
+            matrix_B.append(row)
+        
+        # Calculate and display matrix addition
+        try:
+            addition_result = matrix_addition(matrix_A, matrix_B)
+            print("Sum of the matrices:")
+            print_matrix(addition_result)
+        except ValueError as e:
+            print(e)
+        
+        # Calculate and display matrix multiplication
+        try:
+            multiplication_result = matrix_multiplication(matrix_A, matrix_B)
+            print("Product of the matrices:")
+            print_matrix(multiplication_result)
+        except ValueError as e:
+            print(e)
+    
+    except ValueError:
+        print("Invalid input. Please enter integer values.")
+
+if __name__ == "__main__":
+    main()
