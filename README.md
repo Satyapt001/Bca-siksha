@@ -45,7 +45,7 @@
 - Adding Programming Q&A and making an interface to view and download all code solution.
 - making contribution section more functional.
 - Adding a sub page that contains the list of all referred Resources.(footer resource)
-- creating a message modal so that user can send there testimonial,tesetimonial section is for showing messeges of student users.
+- creating a message modal so that user can send there testimonial,testimonial section is for showing messeges of student users.
 
 THIS PROJECT IS UNDER DEVELOPMENT.FEEL FREE TO FORK & CONTRIBUTE!     
 
