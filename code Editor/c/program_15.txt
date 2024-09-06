@@ -1,0 +1,2 @@
+// Code for C program 15
+print('Program 15 in C')
