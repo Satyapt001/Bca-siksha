@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bca-siksha</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logobca siksha.png">
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/mediaquries.css">
+</head>
+
+<body class="mother-container">
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            BCAशिक्षा
+        </div>
+        <nav class="navbar">
+            <ul class="nav-menu active">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#semesters" class="nav-link">Semesters</a></li>
+                <li class="nav-item"><a href="#Programs" class="nav-link">Programs</a></li>
+                <li class="nav-item"><a href="#contributors" class="nav-link">Contributors</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger active">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+    </header>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content-holder">
+            <div class="search-bar-container">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search here...">
+                    <button class="search-button">
+                        <img src="/assets/images/search icon.png" alt="search icon">
+                    </button>
+
+                </div>
+                <div id="search-results-container">
+                    <ul id="search-results"></ul>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1>Welcome to Bca-siksha</h1>
+                <p>We are delighted to have you here at Bca-siksha, your go-to resource for comprehensive and structured
+                    learning materials tailored for BCA students. Our platform offers a wide array of educational
+                    content,
+                    from detailed course outlines and semester-wise notes to interactive resources and helpful study
+                    guides.
+                </p>
+                <button onclick="exploreSemesters()">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SEMESTERS SECTION -->
+    <section id="semesters">
+        <div class="spacing">
+            <h2>Access by Semester</h2>
+            <div class="semester-grid">
+                <div class="semester">
+                    <div class="semester-img">
+                        <img src="/assets/images/academicsq.jpg" alt="Semester 1" height="200px" width="200px">
+                    </div>
+                    <div class="semester-content">
+                        <h3>Semester 1</h3>
+                        <ul class="subject-list">
+                            <li class="sem-item"><a href="https://mega.nz/folder/wVZkgDbT#x0UBYSedXwTTvCToIkUNFA">Environmental Science</a></li>
+                            <li class="sem-item"><a
+                                    href="https://mega.nz/folder/ZZw12TqS#4Ba9fOmGzChfCQrEqRdeiw">DigitalLogic</a>
+                            </li>
+                            <li class="sem-item"><a href="https://mega.nz/file/JRx11AAK">C Programming</a></li>
+                            <li class="sem-item"><a href="https://mega.nz/folder/tJ5lnQAK#JvnadoYZrDFzobJ0Nwjjqw">Principles of Management</a></li>
+                        </ul>
+                    </div>
+                    <button class="access-btn">&#8594;</button>
+                </div>
+                <div class="semester">
+                    <div class="semester-img">
+                        <img src="/assets/images/academicsq.jpg" alt="Semester 1" height="200px" width="200px">
+                    </div>
+                    <div class="semester-content">
+                        <h3>Semester 2</h3>
+                        <ul class="subject-list">
+                            <li class="sem-item"><a href="https://mega.nz/folder/gEQgTS7T#mUhfzK-kG3HQm37o4wbq3Q">C++ programming</a></li>
+                            <li class="sem-item"><a href="https://mega.nz/folder/oRQTwRDB#sdRQ7-_5BpPeOWi--VdbOQ">DSA</a></li>
+                            <li class="sem-item"><a href="https://mega.nz/folder/tApmgR7D#54pkxyWyUlfDae4xRJ3Jlw">English</a></li>
+                            <li class="sem-item"><a href="https://mega.nz/folder/dMRDiJJR#Jl2IlmJrO1REohRFSiGA4A">Statistics</a></li>
+                        </ul>
+                    </div>
+                    <button class="access-btn">&#8594;</button>
+                </div>
+                <div class="semester">
+                    <div class="semester-img">
+                        <img src="/assets/images/academicsq.jpg" alt="Semester 1" height="200px" width="200px">
+                    </div>
+                    <div class="semester-content">
+                        <h3>Semester 3</h3>
+                        <ul class="subject-list">
+                            <li class="sem-item"><a href="https://mega.nz/folder/NN5lWL7S#-BMuaICp9kV6AEx5r4Ig4w">Java Programming</a></li>
+                            <li class="sem-item"><a href="https://mega.nz/folder/RcAVTJbZ#DKp6U_BvLQ7HtrTTKZouKQ">Operating Systems</a></li>
+                            <li class="sem-item"><a href="https://mega.nz/folder/dVJm1TZZ#xPVFigP_KPq_xd-SISFeHQ">Discrete Mathematics</a></li>
+                            <li class="sem-item"><a href="https://mega.nz/folder/IJhCkQ6D#zuNauUbT6OkpH3KdceCWkw">Python Programming</a></li>
+                            <li class="sem-item"><a href="https://mega.nz/folder/4BBUVCaT#rc4ZLP1JtNBletr-OZZKOw">Business Accounting</a></li>
+                        </ul>
+                    </div>
+                    <button class="access-btn">&#8594;</button>
+                </div>
+                <div class="semester">
+                    <div class="semester-img">
+                        <img src="/assets/images/academicsq.jpg" alt="Semester 1" height="200px" width="200px">
+                    </div>
+                    <div class="semester-content">
+                        <h3>Semester 4</h3>
+                        <ul class="subject-list">
+                            <li class="sem-item"><a href="https://mega.nz/folder/NZhzTILB#y7fOMelDu8H4b1xT1ENPkQ">Computer Organization</a></li>
+                            <li class="sem-item"><a href="https://mega.nz/folder/oYgwUI4T#3qrP4Jke2TTQlYpraFcdQQ">Computer Networks</a></li>
+                            <li class="sem-item"><a href="https://mega.nz/folder/gcZH0DAC#qR95mGEn1r9BEvKG9PQ1eQ">Database Management</a></li>
+                            <li class="sem-item"><a href="https://mega.nz/folder/AEgBkYQR#V8xcncBgzzew4LU0NXjriw">Android Programming</a></li>
+                            <li class="sem-item"><a href="https://mega.nz/folder/sQQVGBzK#oC2EUdrhXjtLuvkzizLviw">Business Economics</a></li>
+                        </ul>
+
+                    </div>
+                    <button class="access-btn">&#8594;</button>
+                </div>
+
+                <div class="semester">
+                    <div class="semester-img">
+                        <img src="/assets/images/academicsq.jpg" alt="Semester 1" height="200px" width="200px">
+                    </div>
+                    <div class="semester-content">
+                        <h3>Semester 5</h3>
+                        <ul class="subject-list">
+                            <li class="sem-item"><a href="https://mega.nz/folder/ZNBBiSAS#p6rtswB-S5OGmtaKUIwVxA">Web Technologies</a></li>
+                            <li class="sem-item"><a href="https://mega.nz/folder/tA4x3aAI#oYJkLrRDYLQdLHd1cu1l1Q">Software Engineering</a></li>
+                            <li class="sem-item"><a href="https://mega.nz/folder/tEYhGBaJ#uRuySoT9SA9cg4nAWzfLHw">Unix shell programming</a></li>
+                            <li class="sem-item"><a href="https://mega.nz/folder/oZARnbBQ#xl0BxqiuvV27zjOEe8-UvA">Data Mining</a></li>
+                        </ul>
+                    </div>
+                    <button class="access-btn">&#8594;</button>
+                </div>
+                <div class="semester">
+                    <div class="semester-img">
+                        <img src="/assets/images/academicsq.jpg" alt="Semester 1" height="200px" width="200px">
+                    </div>
+                    <div class="semester-content">
+                        <h3>Semester 6</h3>
+                        <ul class="subject-list">
+                            <li class="sem-item"><a href="https://mega.nz/folder/wcARVJRZ#96LU44psa43ryNPCybZibQ">Computer Graphics</a></li>
+                            <li class="sem-item"><a href="https://mega.nz/folder/FYgyiI5K#2UIAxmKI0aeEEp9eLW2Muw">Data Science</a></li>
+                            <li class="sem-item"><a href="https://mega.nz/folder/FYgyiI5K#2UIAxmKI0aeEEp9eLW2Muw">Numerical Techniques</a></li>
+                            <li class="sem-item"><a href="https://mega.nz/folder/RZRCHZyD#13K1oSb7MISEMHi-efwSdg">Project Works</a></li>
+                        </ul>
+                    </div>
+                    <button class="access-btn">&#8594;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- RESOURCES SECTION -->
+    <section id="Programs">
+        <div class="spacing">
+            <h2>select by programming language </h2>
+            <div class="program-holder">
+                <a href="code Editor/codeViewer.html"> c programming</a>
+                <a href="code Editor/codeViewer.html">C++ programming</a>
+                <a href="code Editor/codeViewer.html">Java</a>
+                <a href="code Editor/codeViewer.html">Python</a>
+                <a href="code Editor/codeViewer.html">html</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- STUDENT TESTIMONIALS SECTION -->
+    <section id="testimonials" class="testimonials">
+        <div class="testimonial">
+            <img src="./assets/student.jpg" alt="Student 1">
+            <blockquote>Quote 1</blockquote>
+        </div>
+        <div class="testimonial">
+            <img src="./assets/student.jpg" alt="Student 2">
+            <blockquote>Quote 2</blockquote>
+        </div>
+        <div class="testimonial">
+            <img src="./assets/student.jpg" alt="Student 3">
+            <blockquote>Quote 3</blockquote>
+        </div>
+    </section>
+
+
+    <!-- CONTRIBUTORS SECTION -->
+    <section id="contributors" class="contributors">
+        <div class="spacing">
+            <h2>know our contributors</h2>
+            <center>
+                <div class="container">
+                    <div class="contributor-card">
+                        <div class="upper-section">
+                            <div class="img-container">
+                                <img src="/assets/images/no_pic.png" alt="Contributor Image" class="profile-img">
+                            </div>
+                            <div class="info">
+                                <h2 class="name">John Doe</h2>
+                                <p class="designation">Web Developer</p>
+                                <div class="social-icons">
+                                    <a href="#" class="yt"><img src="assets/social_icon/youtube.png" alt="iconyt"
+                                            height="30px" width="30px"></a>
+                                    <a href="#" class="linkedin"><img src="assets/social_icon/LinkedIN.png"
+                                            alt="iconLin" height="30px" width="30px"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="praise-btn">Praise</button>
+                        <p class="praise-count" data-name="John Doe"><span id="praise-number-1">100</span> others
+                            praised
+                            "John Doe"</p>
+                    </div>
+
+                    <div class="contributor-card">
+                        <div class="upper-section">
+                            <div class="img-container">
+                                <img src="/assets/images/no_pic.png" alt="Contributor Image" class="profile-img">
+                            </div>
+                            <div class="info">
+                                <h2 class="name">John Doe</h2>
+                                <p class="designation">Web Developer</p>
+                                <div class="social-icons">
+                                    <a href="#" class="yt"><img src="assets/social_icon/youtube.png" alt="iconyt"
+                                            height="30px" width="30px"></a>
+                                    <a href="#" class="linkedin"><img src="assets/social_icon/LinkedIN.png"
+                                            alt="iconLin" height="30px" width="30px"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="praise-btn">Praise</button>
+                        <p class="praise-count" data-name="John Doe"><span id="praise-number-3">100</span> others
+                            praised
+                            "John Doe"</p>
+                    </div>
+
+                    <div class="contributor-card">
+                        <div class="upper-section">
+                            <div class="img-container">
+                                <img src="/assets/images/no_pic.png" alt="Contributor Image" class="profile-img">
+                            </div>
+                            <div class="info">
+                                <h2 class="name">John Doe</h2>
+                                <p class="designation">Web Developer</p>
+                                <div class="social-icons">
+                                    <a href="#" class="yt"><img src="assets/social_icon/youtube.png" alt="iconyt"
+                                            height="30px" width="30px"></a>
+                                    <a href="#" class="linkedin"><img src="assets/social_icon/LinkedIN.png"
+                                            alt="iconLin" height="30px" width="30px"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="praise-btn">Praise</button>
+                        <p class="praise-count" data-name="John Doe"><span id="praise-number-2">100</span> others
+                            praised
+                            "John Doe"</p>
+                    </div>
+                </div>
+            </center>
+        </div>
+    </section>
+
+    <!-- CALL-TO-ACTION SECTION -->
+    <section class="cta-container">
+        <div class="cta">
+            <h1>Be a Contributor</h1>
+            <p>The contents are sourced from the internet.Bca-siksha would be a great platform for student to go along
+                with their BCA Journey.
+                This website is underdevelopment so if you are willing to contribute feel free to fork me on Github.</p>
+            contribute In :
+            <div class="cta-button">
+                <button class="btn-1"><a class="btn--1" href="">Development</a></button>
+                <button class="btn-2"><a class="btn--1"
+                        href="https://satyapt001.github.io/Sp_t/#contact">feedback</a></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-holder">
+            <div class="social-media">
+                <img src="assets/social_icon/github.png" alt="youtube" height="40px" width="40px">
+                <img src="assets/social_icon/LinkedIN.png" alt="youtube" height="40px" width="40px">
+                <img src="assets/social_icon/whatsapp.png" alt="youtube" height="40px" width="40px">
+            </div>
+            <div class="nav-holder">
+                <h5>Quick links</h5>
+                <nav class="navbar gap-footer">
+                    <ul>
+                        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#semesters" class="nav-link">Semesters</a></li>
+                        <li class="nav-item"><a href="#resources" class="nav-link">Resources</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="contact-holder">
+                <h3>let's talk</h3>
+                <p>Email : satyapt@gmail.com<br>
+                    phone : 9893389388 <br>
+                    Address : Gobindpali ward-No-15,Bargarh,Odisha</p>
+            </div>
+            <div class="footer-logo"><img src="/assets/images/logobca siksha.png" alt="bcasiksha_logo" width="150px"
+                    height="150px">
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="cprgt">
+            <center>
+                © 2024 Made by sp_t
+            </center>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lunr/lunr.min.js"></script>
+    <script src="src/app.js"></script>
+    <script src="src/navbar.js"></script>
+    <script src="src/search.js"></script>
+    <script src="src/focus.js"></script>
+    <script src="src/contributors.js"></script>
+</body>
+
+</html>
