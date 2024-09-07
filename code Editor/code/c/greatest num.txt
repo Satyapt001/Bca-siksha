@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+// Function to find the greatest of three numbers
+int findGreatest(int a, int b, int c) {
+    if (a >= b && a >= c)
+        return a;
+    else if (b >= a && b >= c)
+        return b;
+    else
+        return c;
+}
+
+int main() {
+    int num1, num2, num3;
+
+    // Input the three numbers
+    printf("Enter the first number: ");
+    scanf("%d", &num1);
+    printf("Enter the second number: ");
+    scanf("%d", &num2);
+    printf("Enter the third number: ");
+    scanf("%d", &num3);
+
+    // Find the greatest number
+    int greatest = findGreatest(num1, num2, num3);
+
+    // Display the greatest number
+    printf("The greatest number is: %d\n", greatest);
+
+    return 0;
+}
