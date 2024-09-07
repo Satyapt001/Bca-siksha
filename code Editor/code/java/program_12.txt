@@ -1,0 +1,2 @@
+// Code for Java program 12
+print('Program 12 in Java')

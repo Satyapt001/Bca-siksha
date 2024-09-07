@@ -1,0 +1,2 @@
+// Code for SQL program 7
+print('Program 7 in SQL')
