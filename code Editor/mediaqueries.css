@@ -1,0 +1,32 @@
+@media (max-width:1048px) {
+    .search-container {
+        max-width: 300px; /* Adjust the max-width as needed */
+        
+    }
+    .container {
+        width: 100%;
+    }    
+    
+}    
+@media (max-width:873px){
+    .header h1 {
+        font-size: 20px;
+    }
+    
+}
+@media (max-width:749px){
+    .header {
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .search-container {
+        margin:1em 0 ;
+        width: 100%;
+    }
+    .header h1 {
+        font-size: 24px;
+    }
+    .footer-alignment p{
+        font-size: 0.7em;
+    }
+}
