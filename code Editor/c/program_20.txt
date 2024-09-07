@@ -1,2 +1,0 @@
-// Code for C program 20
-print('Program 20 in C')
