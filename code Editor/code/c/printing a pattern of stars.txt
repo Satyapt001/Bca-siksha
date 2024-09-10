@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int lines;
+    
+    // Prompt the user for the number of lines
+    printf("Enter the number of lines: ");
+    scanf("%d", &lines);
+    
+    // Validate the input
+    if (lines <= 0) {
+        printf("Number of lines must be a positive integer.\n");
+        return 1;
+    }
+
+    // Loop to print the triangle
+    for (int i = 1; i <= lines; i++) {
+        // Print stars for the current line
+        for (int j = 1; j <= (2 * i - 1); j++) {
+            printf("*");
+        }
+        // Move to the next line after printing stars
+        printf("\n");
+    }
+
+    return 0;
+}
