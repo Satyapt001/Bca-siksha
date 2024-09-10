@@ -1,0 +1,121 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX_SIZE 100
+
+void printEven(int arr[], int size);
+void printOdd(int arr[], int size);
+void calculateSumAndAverage(int arr[], int size);
+void findMinMax(int arr[], int size);
+void removeDuplicates(int arr[], int *size);
+void printReverse(int arr[], int size);
+
+int main() {
+    int arr[MAX_SIZE];
+    int size = 0;
+    int choice;
+
+    while (1) {
+        printf("\nMenu:\n");
+        printf("1. Enter a new array\n");
+        printf("2. Print even-valued elements\n");
+        printf("3. Print odd-valued elements\n");
+        printf("4. Calculate and print sum and average\n");
+        printf("5. Print maximum and minimum element\n");
+        printf("6. Remove duplicates\n");
+        printf("7. Print the array in reverse order\n");
+        printf("8. Quit\n");
+        printf("Enter your choice (1-8): ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                printf("Enter number of elements (max %d): ", MAX_SIZE);
+                scanf("%d", &size);
+                if (size <= 0 || size > MAX_SIZE) {
+                    printf("Invalid size!\n");
+                    size = 0;
+                    break;
+                }
+                printf("Enter %d elements:\n", size);
+                for (int i = 0; i < size; i++) scanf("%d", &arr[i]);
+                break;
+            case 2:
+                printEven(arr, size);
+                break;
+            case 3:
+                printOdd(arr, size);
+                break;
+            case 4:
+                calculateSumAndAverage(arr, size);
+                break;
+            case 5:
+                findMinMax(arr, size);
+                break;
+            case 6:
+                removeDuplicates(arr, &size);
+                break;
+            case 7:
+                printReverse(arr, size);
+                break;
+            case 8:
+                return 0;
+            default:
+                printf("Invalid choice!\n");
+        }
+    }
+
+    return 0;
+}
+
+void printEven(int arr[], int size) {
+    printf("Even elements: ");
+    for (int i = 0; i < size; i++) if (arr[i] % 2 == 0) printf("%d ", arr[i]);
+    printf("\n");
+}
+
+void printOdd(int arr[], int size) {
+    printf("Odd elements: ");
+    for (int i = 0; i < size; i++) if (arr[i] % 2 != 0) printf("%d ", arr[i]);
+    printf("\n");
+}
+
+void calculateSumAndAverage(int arr[], int size) {
+    if (size == 0) { printf("Array is empty.\n"); return; }
+    int sum = 0;
+    for (int i = 0; i < size; i++) sum += arr[i];
+    printf("Sum: %d, Average: %.2f\n", sum, (double)sum / size);
+}
+
+void findMinMax(int arr[], int size) {
+    if (size == 0) { printf("Array is empty.\n"); return; }
+    int min = arr[0], max = arr[0];
+    for (int i = 1; i < size; i++) {
+        if (arr[i] < min) min = arr[i];
+        if (arr[i] > max) max = arr[i];
+    }
+    printf("Min: %d, Max: %d\n", min, max);
+}
+
+void removeDuplicates(int arr[], int *size) {
+    if (*size == 0) { printf("Array is empty.\n"); return; }
+    int temp[MAX_SIZE], newSize = 0;
+    for (int i = 0; i < *size; i++) {
+        int j;
+        for (j = 0; j < newSize; j++) if (arr[i] == temp[j]) break;
+        if (j == newSize) temp[newSize++] = arr[i];
+    }
+    for (int i = 0; i < newSize; i++) arr[i] = temp[i];
+    *size = newSize;
+    printf("Array without duplicates: ");
+    for (int i = 0; i < *size; i++) printf("%d ", arr[i]);
+    printf("\n");
+}
+
+void printReverse(int arr[], int size) {
+    if (size == 0) { printf("Array is empty.\n"); return; }
+    printf("Array in reverse: ");
+    for (int i = size - 1; i >= 0; i--) printf("%d ", arr[i]);
+    printf("\n");
+}
+
