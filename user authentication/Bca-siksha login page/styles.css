@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    
+  }
+
+  .container {
+    border-radius: 20px;
+    width: 400px;
+    background-color: white;
+    border: none;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-box {
+    border-radius:20px;
+    width: 100%;
+    padding: 20px;
+    border: 2px dashed black;
+  }
+
+  .form-box h3 {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .user-type {
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: orange;
+    line-height: 1.5;
+  }
+
+  .user-type label {
+    margin-right: 10px;
+  }
+  label{
+    font-weight: 700;
+    line-height: 0;
+  }
+  input[type="email"], input[type="password"] {
+    border-radius: 10px;
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0;
+    border: 1px solid black;
+  }
+
+  button {
+    padding: 10px;
+    width: 100%;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+
+  .btn-register {
+    border-radius: 100px;
+    background-color: green;
+    color: white;
+    border: 1px solid green;
+  }
+  .btn-register:hover {
+    background-color: #f4f9fd;
+    color: green;
+    border: 1px solid green;
+  }
+  .btn-submit {
+    border-radius: 100px;
+    background-color: blue;
+    color: white;
+    border: 1px solid blue;
+  }
+  .btn-submit:hover {
+    background-color:#f4f9fd;
+    color: blue;
+    border: 1px solid blue;
+  }
+  .separator{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+  }
+  .divider{
+    width:35%;
+    border-bottom: 1px dashed #000;
+  }
+  .social-buttons {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+
+  .error {
+    display: none;
+    color:green;
+    text-align: left;
+  }
+
+  .switch-btn {
+    cursor: pointer;
+    text-align: center;
+    text-decoration: underline;
+    color: blue;
+    margin-top: 10px;
+  }
+
+  .footer-alignment{
+    font-size: 0.7em;
+    margin-top: 1em;
+    font-weight: 700;
+  }
+
+  /* For hiding forms */
+  .hidden {
+    display: none;
+  }
+  @media (min-width:700px){
+    .container{
+      border: 1px dashed black;
+    }
+  }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Sign-Up Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- Sign-Up Form -->
+    <div class="form-box" id="signup-form">
+      <h3>SIGN UP</h3>
+      <div class="user-type">
+        <h5 style="color: black;font-weight: 700;text-decoration-line: underline;">User</h5>
+        <label><input type="radio" name="userTypeSignup" value="Teacher"> Teacher</label>
+        <label><input type="radio" name="userTypeSignup" value="Student"> Student</label>
+        <label><input type="radio" name="userTypeSignup" value="Guest"> Guest</label>
+      </div>
+      <label for="email">Email<input type="email" placeholder="Email"></label>
+      <label for="password">Password<input type="password" placeholder="Create Password"></label>
+      <label for="password">Retype Password<input type="password" placeholder="Retype Password"></label>
+
+      <button class="btn-register">Register</button>
+      <div class="separator">
+        <div class="divider"></div>
+        <div style="text-align:center; font-weight: 600; font-size: 13px;">Sign Up with</div>
+        <div class="divider"></div>
+      </div>
+      <div class="social-buttons">
+        <a href="#"><img src="assets/google.png" alt="Google_logo" height="30px" width="30px"></a>
+        <a href="#"><img src="assets/github.png" alt="Github_logo" height="30px" width="30px"></a>
+      </div>
+
+      <div class="switch-btn" id="switch-to-signin">Already have an account? Sign In</div>
+    </div>
+
+    <!-- Sign-In Form -->
+    <div class="form-box hidden" id="signin-form">
+    <h3>SIGN IN</h3>
+      
+      <div class="user-type">
+        <h5 style="color: black;font-weight: 600;text-decoration-line: underline;">user</h5>
+        <label><input type="radio" name="userTypeSignin" value="Teacher"> Teacher</label>
+        <label><input type="radio" name="userTypeSignin" value="Student"> Student</label>
+        <label><input type="radio" name="userTypeSignin" value="Guest"> Guest</label>
+      </div>
+      <label for="email">Email<input type="email" placeholder="Email"></label>
+      <label for="password">Password<input type="password" placeholder="Password"></label>
+      <div class="error">SignIn Successful!</div>
+      <button class="btn-submit">Submit</button>
+      <div class="separator">
+        <div class="divider"></div>
+        <div style="text-align:center; font-weight: 600; font-size: 13px;">Sign In with</div>
+        <div class="divider"></div>
+      </div>
+      <div class="social-buttons">
+        <a href="#"><img src="assets/google.png" alt="Google_logo" height="30px" width="30px"></a>
+        <a href="#"><img src="assets/github.png" alt="Github_logo" height="30px" width="30px"></a>
+      </div>
+
+      <div class="switch-btn" id="switch-to-signup">Don't have an account? Sign Up</div>
+    </div>
+  </div>
+  <footer>
+    <p class="footer-alignment">© <a href="https://bca-siksha.netlify.app/">Bca-siksha</a> 2024 | Made by satya</p>
+  </footer>
+  <script src="entry.js"></script>
+</body>
+
+</html>
