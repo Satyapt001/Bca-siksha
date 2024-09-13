@@ -1,0 +1,74 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// Function to merge two sorted arrays
+void mergeArrays(int arr1[], int n1, int arr2[], int n2, int arr3[]) {
+    int i = 0, j = 0, k = 0;
+
+    // Traverse both arrays
+    while (i < n1 && j < n2) {
+        // Check if current element of first array is smaller than current element of second array
+        // If yes, store first array element and increment first array index. Otherwise, do the same with second array
+        if (arr1[i] < arr2[j]) {
+            arr3[k++] = arr1[i++];
+        } else {
+            arr3[k++] = arr2[j++];
+        }
+    }
+
+    // Store remaining elements of first array
+    while (i < n1) {
+        arr3[k++] = arr1[i++];
+    }
+
+    // Store remaining elements of second array
+    while (j < n2) {
+        arr3[k++] = arr2[j++];
+    }
+}
+
+int main() {
+    int n1, n2, i;
+
+    // Input size of first array
+    printf("Enter the number of elements in the first array: ");
+    scanf("%d", &n1);
+    int *arr1 = (int*) malloc(n1 * sizeof(int));
+
+    // Input elements of first array
+    printf("Enter the elements of the first array:\n");
+    for (i = 0; i < n1; i++) {
+        scanf("%d", &arr1[i]);
+    }
+
+    // Input size of second array
+    printf("Enter the number of elements in the second array: ");
+    scanf("%d", &n2);
+    int *arr2 = (int*) malloc(n2 * sizeof(int));
+
+    // Input elements of second array
+    printf("Enter the elements of the second array:\n");
+    for (i = 0; i < n2; i++) {
+        scanf("%d", &arr2[i]);
+    }
+
+    // Array to store the merged array
+    int *arr3 = (int*) malloc((n1 + n2) * sizeof(int));
+
+    // Merge the two arrays
+    mergeArrays(arr1, n1, arr2, n2, arr3);
+
+    // Print the merged array
+    printf("Merged array:\n");
+    for (i = 0; i < n1 + n2; i++) {
+        printf("%d ", arr3[i]);
+    }
+    printf("\n");
+
+    // Free the allocated memory
+    free(arr1);
+    free(arr2);
+    free(arr3);
+
+    return 0;
+}
