@@ -1,2 +1,171 @@
-// Code for C program 18
-print('Program 18 in C')
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+// Function prototypes
+void showAddress(char *str);
+void concatenateWithoutStrcat(char *str1, char *str2);
+void concatenateWithStrcat(char *str1, char *str2);
+void compareStrings(char *str1, char *str2);
+int calculateLength(char *str);
+void toUppercase(char *str);
+void toLowercase(char *str);
+int countVowels(char *str);
+void reverseString(char *str);
+
+int main() {
+    char str1[100], str2[100];
+    int choice;
+
+    do {
+        printf("\nMenu:\n");
+        printf("1. Show address of each character in string\n");
+        printf("2. Concatenate two strings without using strcat\n");
+        printf("3. Concatenate two strings using strcat\n");
+        printf("4. Compare two strings\n");
+        printf("5. Calculate length of the string (use pointers)\n");
+        printf("6. Convert all lowercase characters to uppercase\n");
+        printf("7. Convert all uppercase characters to lowercase\n");
+        printf("8. Calculate number of vowels\n");
+        printf("9. Reverse the string\n");
+        printf("10. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        getchar(); // To consume the newline character left by scanf
+
+        switch (choice) {
+            case 1:
+                printf("Enter a string: ");
+                gets(str1);
+                showAddress(str1);
+                break;
+            case 2:
+                printf("Enter first string: ");
+                gets(str1);
+                printf("Enter second string: ");
+                gets(str2);
+                concatenateWithoutStrcat(str1, str2);
+                printf("Concatenated string: %s\n", str1);
+                break;
+            case 3:
+                printf("Enter first string: ");
+                gets(str1);
+                printf("Enter second string: ");
+                gets(str2);
+                concatenateWithStrcat(str1, str2);
+                printf("Concatenated string: %s\n", str1);
+                break;
+            case 4:
+                printf("Enter first string: ");
+                gets(str1);
+                printf("Enter second string: ");
+                gets(str2);
+                compareStrings(str1, str2);
+                break;
+            case 5:
+                printf("Enter a string: ");
+                gets(str1);
+                printf("Length of the string: %d\n", calculateLength(str1));
+                break;
+            case 6:
+                printf("Enter a string: ");
+                gets(str1);
+                toUppercase(str1);
+                printf("Uppercase string: %s\n", str1);
+                break;
+            case 7:
+                printf("Enter a string: ");
+                gets(str1);
+                toLowercase(str1);
+                printf("Lowercase string: %s\n", str1);
+                break;
+            case 8:
+                printf("Enter a string: ");
+                gets(str1);
+                printf("Number of vowels: %d\n", countVowels(str1));
+                break;
+            case 9:
+                printf("Enter a string: ");
+                gets(str1);
+                reverseString(str1);
+                printf("Reversed string: %s\n", str1);
+                break;
+            case 10:
+                printf("Exiting...\n");
+                break;
+            default:
+                printf("Invalid choice! Please try again.\n");
+        }
+    } while (choice != 10);
+
+    return 0;
+}
+
+void showAddress(char *str) {
+    while (*str) {
+        printf("Character: %c, Address: %p\n", *str, (void*)str);
+        str++;
+    }
+}
+
+void concatenateWithoutStrcat(char *str1, char *str2) {
+    while (*str1) str1++;
+    while ((*str1++ = *str2++));
+}
+
+void concatenateWithStrcat(char *str1, char *str2) {
+    strcat(str1, str2);
+}
+
+void compareStrings(char *str1, char *str2) {
+    int result = strcmp(str1, str2);
+    if (result == 0) {
+        printf("Strings are equal.\n");
+    } else if (result < 0) {
+        printf("String 1 is less than String 2.\n");
+    } else {
+        printf("String 1 is greater than String 2.\n");
+    }
+}
+
+int calculateLength(char *str) {
+    int length = 0;
+    while (*str++) length++;
+    return length;
+}
+
+void toUppercase(char *str) {
+    while (*str) {
+        *str = toupper(*str);
+        str++;
+    }
+}
+
+void toLowercase(char *str) {
+    while (*str) {
+        *str = tolower(*str);
+        str++;
+    }
+}
+
+int countVowels(char *str) {
+    int count = 0;
+    while (*str) {
+        if (*str == 'a' || *str == 'e' || *str == 'i' || *str == 'o' || *str == 'u' ||
+            *str == 'A' || *str == 'E' || *str == 'I' || *str == 'O' || *str == 'U') {
+            count++;
+        }
+        str++;
+    }
+    return count;
+}
+
+void reverseString(char *str) {
+    int length = calculateLength(str);
+    for (int i = 0; i < length / 2; i++) {
+        char temp = str[i];
+        str[i] = str[length - i - 1];
+        str[length - i - 1] = temp;
+    }
+}
