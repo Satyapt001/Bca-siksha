@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int n, i;
+    int *arr;
+    int sum = 0;
+    float average;
+
+    // Ask the user for the number of elements
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    // Dynamically allocate memory using malloc()
+    arr = (int*) malloc(n * sizeof(int));
+
+    // Check if the memory has been successfully allocated
+    if (arr == NULL) {
+        printf("Memory not allocated.\n");
+        return 1; // Exit the program if memory allocation fails
+    }
+
+    // Get the elements from the user
+    printf("Enter the elements:\n");
+    for (i = 0; i < n; ++i) {
+        scanf("%d", &arr[i]);
+        sum += arr[i];
+    }
+
+    // Calculate the average
+    average = (float)sum / n;
+
+    // Print the sum and average
+    printf("Sum = %d\n", sum);
+    printf("Average = %.2f\n", average);
+
+    // Free the allocated memory
+    free(arr);
+
+    return 0;
+}
