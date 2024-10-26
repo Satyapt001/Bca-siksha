@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bca-siksha</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logobca siksha.png">
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/mediaquries.css">
+</head>
+
+<body class="mother-container">
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            BCAशिक्षा
+        </div>
+        <nav class="navbar">
+            <ul class="nav-menu active">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="semester.html" class="nav-link">Semesters</a></li>
+                <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
+                <li class="nav-item"><a href="contributors.html" class="nav-link">Contributors</a></li>
+                <li class="nav-item"><a href="https://satyapt001.github.io/Sp_t/#contact" class="nav-link">Contact</a>
+                </li><span style="color:var(--font-color-blue-fd)">|</span>
+                <div class="navitem-UA--holder" style="display: flex;">
+                    <li class="nav-item-UA"><a href="user authentication/Bca-siksha login page/index.html"
+                            class="nav-link">Signin</a></li>
+                    <li class="nav-item-UA"><a href="user authentication/Bca-siksha login page/index.html"
+                            class="nav-link">Signup</a></li>
+                </div>
+            </ul>
+            <div class="hamburger active">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+    </header>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content-holder">
+            <div class="search-bar-container">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search here...">
+                    <button class="search-button">
+                        <img src="/assets/images/search icon.png" alt="search icon">
+                    </button>
+
+                </div>
+                <div id="search-results-container">
+                    <ul id="search-results"></ul>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1>Welcome to Bca-siksha</h1>
+                <p>We are delighted to have you here at Bca-siksha, your go-to resource for comprehensive and structured
+                    learning materials tailored for BCA students. Our platform offers a wide array of educational
+                    content,
+                    from detailed course outlines and semester-wise notes to interactive resources and helpful study
+                    guides.
+                </p>
+                <div class="container-homebtn">
+                    <button class="btn-trigger">Get Started</button>
+                    <div class="animation-logo"></div>
+                    <div class="site-name" id="site-name"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESOURCES SECTION -->
+    <section id="Programs">
+        <div class="spacing">
+            <h2>Select by Programming Language</h2>
+            <div class="program-holder">
+                <a href="code Editor/codeViewer.html?lang=C">C Programming</a>
+                <a href="code Editor/codeViewer.html?lang=C++">C++ Programming</a>
+                <a href="code Editor/codeViewer.html?lang=Java">Java</a>
+                <a href="code Editor/codeViewer.html?lang=Python">Python</a>
+                <a href="code Editor/codeViewer.html?lang=HTML">HTML</a>
+                <a href="code Editor/codeViewer.html?lang=Unix">Unix</a>
+                <a href="code Editor/codeViewer.html?lang=Data Mining">Data Mining</a>
+                <a href="code Editor/codeViewer.html?lang=Software Engineering">Software Engineering</a>
+                <a href="code Editor/codeViewer.html?lang=JavaScript">JavaScript</a>
+                <a href="code Editor/codeViewer.html?lang=SQL">SQL</a>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-holder">
+            <div class="social-media">
+                <img src="assets/social_icon/github.png" alt="youtube" height="40px" width="40px">
+                <img src="assets/social_icon/LinkedIN.png" alt="youtube" height="40px" width="40px">
+                <img src="assets/social_icon/whatsapp.png" alt="youtube" height="40px" width="40px">
+            </div>
+            <div class="nav-holder">
+                <h5>Quick links</h5>
+                <nav class="navbar gap-footer">
+                    <ul>
+                        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#semesters" class="nav-link">Semesters</a></li>
+                        <li class="nav-item"><a href="#resources" class="nav-link">Resources</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="contact-holder">
+                <h3>let's talk</h3>
+                <p>Email : satyapt@gmail.com<br>
+                    phone : 9893389388 <br>
+                    Address : Gobindpali ward-No-15,Bargarh,Odisha</p>
+            </div>
+             <div class="footer-logo"><img src="/assets/images/logobca siksha.png" alt="bcasiksha_logo" width="150px"
+                    height="150px">
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="cprgt">
+            <center>
+                © 2024 Made by sp_t
+            </center>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lunr/lunr.min.js"></script>
+    <script src="src/app.js"></script>
+    <script src="src/navbar.js"></script>
+    <script src="src/search.js"></script>
+    <script src="src/focus.js"></script>
+    <script src="src/contributors.js"></script>
+    <!-- <script src="src/introAnimation.js"></script> -->
+</body>
+
+</html>
